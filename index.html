@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Psychis Game!</title>
+    <title>Psychic Game!</title>
 </head>
 <body>
-    <h1>Psychic Game!</h1>
-    <script type="text/javascript"></script>
+
+    <h1>The Psychic Game</h1>
+
+    <div id="game">
+        <p>Guess what letter I'm thinking of!</p>
+    </div>
+
+    <script type="text/javascript">
+    
+    var letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    var wins = 0;
+    var losses = 0;
+    var guessSoFar = 0;
+    var guessesLeft = 9;
+
+    document.onkeyup=function(){
+        var userguess = String.fromCharCode(event.keyCode).
+        toLowerCase();
+        console.log(userguess);
+
+        var computerguess = letters[Math.floor(Math.random()* letters.length)];
+        console.log(computerguess);
+
+
+    }
+    
+    
+    
+    </script>
 
 
 
